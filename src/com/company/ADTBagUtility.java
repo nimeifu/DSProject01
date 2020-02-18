@@ -4,6 +4,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * This is a class used to fill items into the bag and display items of it.
+ * @author Genjie Liu
+ * Lab section:Fri 10:25-11:20 Tuan Tran
+ */
+
 public class ADTBagUtility{
     /**
      * Creates a bag of items, and change items in the bag, and displays items.
@@ -55,7 +61,7 @@ public class ADTBagUtility{
         {
             System.out.println(list.get(i));
         }
-        if(list.size()<=0)
+        if(list.size()==0)
         {
             System.out.println("This is an empty bag.");
         }

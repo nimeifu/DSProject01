@@ -1,16 +1,22 @@
 package com.company;
 
-import java.util.Arrays;
+/**
+ * This is an ADT bag that could contains as many as 50 items in it and has functions like insert new item(s) and make the bag empty.
+ * @author Genjie Liu
+ * Lab section:Fri 10:25-11:20 Tuan Tran
+ */
 
 public class ADTBagBase implements ADTBag {
     /**
      * Create an array of Objects called itemList.
+     * An int called capacity to represent indexes available for items to put in.
      */
    private Object[] itemList;
    private int capacity;
 
     /**
      * An ADTBag constructor that set the bag to contain 50 items.
+     * And set the capacity to 0.
      */
    public ADTBagBase()
     {
@@ -35,7 +41,7 @@ public class ADTBagBase implements ADTBag {
        }
         else
          {
-             
+           //Capacity is increasing so that items would not override each other.
            itemList[capacity]=item;
            capacity++;
          }
@@ -47,6 +53,7 @@ public class ADTBagBase implements ADTBag {
      */
     @Override
     public void makeEmpty() {
+        //Create a new empty array.
         this.itemList=new Object[50];
        }
 
@@ -56,6 +63,7 @@ public class ADTBagBase implements ADTBag {
      */
     @Override
     public void removeLast() {
+       //Set the last item to null.
        itemList[size()-1]=null;
     }
 
@@ -71,6 +79,9 @@ public class ADTBagBase implements ADTBag {
 
         for(int i=0;i<size();i++)
         {
+            /*The object on current index would be replaced by the object on next index,
+              and the object on next index would be replaced by the object next to it and so on until end of the loop
+            */
             itemList[randomIndex+current]=itemList[randomIndex+next];
             current++;
             next++;

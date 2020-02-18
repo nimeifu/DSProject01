@@ -4,7 +4,6 @@ package com.company;
  * This is an interface of an Abstract Data Type bag.
  * @author Genjie Liu
  * Lab section:Fri 10:25-11:20 Tuan Tran
- *
  */
 
 public interface ADTBag {
